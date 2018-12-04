@@ -1,34 +1,32 @@
 const Discord = require('discord.js');
-const tpoints = {};
-const vpoints = {};
-const jimp = require("jimp");
 const client = new Discord.Client();
+const prefix = 'M'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
- client.user.setActivity("",{type: 'watching'})
-  console.log('')
-  console.log('')
+client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
+  console.log(`[Start Time] ${new Date()}`);
   console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
   console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log(`Logged in as [${client.user.username}]`);
   console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('info:')
+  console.log(`Servers! ["${client.guilds.size}"]`);
+  console.log(`Users! ["${client.users.size}"]`);
+  console.log(`Channels! ["${client.channels.size}"]`);
   console.log('╚[════════════════════════════════════]╝')
-  console.log('')
   console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
+  console.log('ARE YOU READY?')
+  console.log('LETS GO BOT ONLINE!')
   console.log('╚[════════════]╝')
   console.log('')
-  console.log('')
 });
+
+
+client.on('ready', () => {                           
+client.user.setGame(``,'https://www.twitch.tv/*help');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`Mhelp | Minv | ${client.guilds.size} Server`,'https://www.twitch.tv/v5bz');
+}); 
 
 
 
@@ -300,7 +298,7 @@ client.on('message', message => {
 
 client.on('message', message => {
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('g!ping')) {
+                        if (message.content.startsWith('*ping')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
